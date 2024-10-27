@@ -202,65 +202,31 @@ export default function SeoImprovementTable() {
         </TableHeader>
         <TableBody>
           {seoImprovements.map((improvement, index) => (
-            <HoverCard key={index}>
-              <HoverCardTrigger asChild>
-                <TableRow
-                  key={improvement.area}
-                  className="py-2 cursor-pointer">
-                  <TableCell className="font-medium text-xl flex items-center">
-                    {improvement.icon}
-                    <span className="ml-2">{improvement.area}</span>
-                  </TableCell>
-                  <TableCell>
-                    <span className="text-xl">{improvement.currentStatus}</span>
-                    <p className="text-muted-foreground text-sm">{improvement.description}</p>
-                  </TableCell>
-                  <TableCell>
-                    <div className="flex items-center">
-                      <span>{improvement.potentialImprovement}</span>
-                      <div className="relative w-full mx-4">
-                        <div className="h-2  bg-muted-foreground/20 rounded-full">
-                          <div
-                            className="h-2 bg-primary rounded-full"
-                            style={{ width: `${improvement.progress}%` }}></div>
-                        </div>
-                      </div>
-                    </div>
-                  </TableCell>
-                </TableRow>
-              </HoverCardTrigger>
-              <HoverCardContent className="min-w-96 p-6 bg-secondary shadow-lg">
-                <div className="space-y-4">
-                  <div className="flex items-center gap-2">
-                    {improvement.icon}
-                    <span className="text-lg font-semibold">{improvement.area}</span>
-                  </div>
-                  <div className="text-muted-foreground text-xl">{improvement.description}</div>
-                  <div className="border-t border-muted-foreground pt-3 space-y-2">
-                    <div className="flex items-center  gap-2 text-xl">
-                      <span className="font-medium">Current Status:</span>
-                      <span>{improvement.currentStatus}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-xl">
-                      <CalendarIcon className="h-4 w-4 text-gray-500" />
-                      <span className="font-medium">Potential Improvement:</span>
-                      <span>{improvement.potentialImprovement}</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-xl">
-                      <span className="font-medium">Progress:</span>
-                      <span>{improvement.progress}%</span>
-                    </div>
-                    <div className="relative w-full mt-2">
-                      <div className="h-2 bg-muted-foreground/20 rounded-full">
-                        <div
-                          className="h-2 bg-primary rounded-full"
-                          style={{ width: `${improvement.progress}%` }}></div>
-                      </div>
+            <TableRow
+              key={improvement.area}
+              className="py-2 cursor-pointer">
+              <TableCell className="font-medium text-xl flex items-center">
+                {improvement.icon}
+                <span className="ml-2">{improvement.area}</span>
+              </TableCell>
+              <TableCell>
+                <span className="text-xl">{improvement.currentStatus}</span>
+                <p className="text-muted-foreground text-sm">{improvement.description}</p>
+              </TableCell>
+              <TableCell>
+                <div className="flex items-center">
+                  <span>{improvement.potentialImprovement}</span>
+                  <div className="relative w-full mx-4">
+                    <div className="h-2  bg-muted-foreground/20 rounded-full">
+                      <div
+                        className="h-2 bg-primary rounded-full"
+                        style={{ width: `${improvement.progress}%` }}></div>
                     </div>
                   </div>
                 </div>
-              </HoverCardContent>
-            </HoverCard>
+              </TableCell>
+            </TableRow>
+
           ))}
         </TableBody>
       </Table>

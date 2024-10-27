@@ -90,7 +90,7 @@ export default async function Testimonial() {
                   <AvatarFallback className="bg-primary/20 ">{testimonial.initials}</AvatarFallback>
                 </Avatar>
                 <CardTitle>{testimonial.name}</CardTitle>
-                <CardDescription className="text-sm w-full text-muted-foreground">
+                <CardContent className="text-sm w-full text-muted-foreground">
                   {testimonial.position}, {testimonial.company}
                   <div className="-ml-1 flex justify-center w-full gap-0.5">
                     {Array.from({ length: 5 })
@@ -105,7 +105,7 @@ export default async function Testimonial() {
                         </svg>
                       ))}
                   </div>
-                </CardDescription>
+                </CardContent>
               </div>
             </CardContent>
           </Card>

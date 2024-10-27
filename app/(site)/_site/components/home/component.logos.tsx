@@ -100,7 +100,7 @@ const LogoComponent = () => {
         <Card
           key="6"
           className="flex h-16 px-8 bg-secondary items-center justify-center rounded-3xl sm:h-32">
-          <CardDescription>
+          <div>
             <div className="p-4 flex flex-row justify-center items-center gap-4">
               <p className="text-xl">Became Our Trusted Partner. We have good place for you too.</p>
               <Button
@@ -110,7 +110,7 @@ const LogoComponent = () => {
                 <ChevronRight className="transition-all duration-300 -translate-x-1 group-hover:translate-x-1.5 " />
               </Button>
             </div>
-          </CardDescription>
+          </div>
         </Card>
       </div>
     </section>

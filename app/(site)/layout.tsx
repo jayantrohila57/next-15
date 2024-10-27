@@ -22,8 +22,9 @@ export default function SiteLayout({
         <SmoothScrollProvider>
           <ThemeProvider
             attribute="class"
-            defaultTheme="dark"
-            enableColorScheme>
+            defaultTheme="light"
+            enableColorScheme
+            >
             <Banner />
             <Header />
             {children}
